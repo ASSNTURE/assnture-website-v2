@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export function Footer() {
   return (
     <footer
@@ -27,6 +29,15 @@ export function Footer() {
             <h1>hello@assnture.com</h1>
           </a>
         </div>
+      </div>
+      <div className="mx-auto mt-8 flex max-w-6xl flex-col gap-3 px-4 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8 dark:text-neutral-500">
+        <p>© {new Date().getFullYear()} ASSNTURE LIMITED. All rights reserved.</p>
+        <Link
+          to="/privacy-policy"
+          className="hover:text-assnture dark:hover:text-assnture"
+        >
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );

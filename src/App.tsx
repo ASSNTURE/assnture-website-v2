@@ -8,6 +8,7 @@ import { ResourcesPage } from './components/ResourcesPage'
 import { SegmentPage } from './components/SegmentPage'
 import { CompliancePage } from './components/CompliancePage'
 import { ScrollToTop } from './components/ScrollToTop'
+import { PrivacyPolicyPage } from './components/PrivacyPolicyPage'
 import {
   AboutPage,
   ListingsPage,
@@ -74,6 +75,8 @@ function App() {
               path="/institutions/infrastructure"
               element={<SegmentRoute path="/institutions/infrastructure" />}
             />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
